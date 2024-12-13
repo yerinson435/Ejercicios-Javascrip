@@ -6,5 +6,20 @@
 // escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo
 // de impositivo que le corresponde.
 
-let renta = 
+function calcularImpuesto() {
+    const rentaAnual = parseInt(prompt('cual es tu renta anual'));
 
+    if (rentaAnual >= 10000 && rentaAnual <= 20000) {
+        alert('Le toca el 5% de impositivo');
+    } else if (rentaAnual > 20000 && rentaAnual <= 35000) {
+        alert('Le toca el 10% de impositivo');
+    } else if (rentaAnual > 35000 && rentaAnual <= 60000) {
+        alert('Le toca el 20% de impositivo');
+    } else if (rentaAnual > 60000) {
+        alert('Le toca el 45% de impositivo');
+    } else {
+        alert('No aplica');
+    }
+}
+
+calcularImpuesto();
